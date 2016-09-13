@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.cmu.yusihao.mycalculator.MainActivity">
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/display"
+            app:layout_widthPercent="100%"
+            app:layout_heightPercent="35%"
+            android:layout_width="0dp"
+            android:layout_height="0dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hello Calculator!" />
+        </RelativeLayout>
+        <android.support.percent.PercentRelativeLayout
+            android:id="@+id/button_num"
+            android:layout_width="0dp"
+            app:layout_widthPercent="75%"
+            android:layout_alignParentLeft="true"
+            android:layout_height="fill_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/display">
+            <LinearLayout
+                android:id="@+id/button_layer1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="25%"
+                style="?android:attr/buttonBarStyle">
+                <Button
+                    android:id="@+id/button7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "7"/>
+                <Button
+                    android:id="@+id/button8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "8"/>
+                <Button
+                    android:id="@+id/button9"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "8"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/button_layer2"
+                android:layout_below="@id/button_layer1"
+                android:layout_centerHorizontal="true"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="25%"
+                style="?android:attr/buttonBarStyle">
+                <Button
+                    android:id="@+id/button4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "4"/>
+                <Button
+                    android:id="@+id/button5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "5"/>
+                <Button
+                    android:id="@+id/button6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "6"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/button_layer3"
+                android:layout_below="@id/button_layer2"
+                android:layout_centerHorizontal="true"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="25%"
+                style="?android:attr/buttonBarStyle">
+                <Button
+                    android:id="@+id/button1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "1"/>
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "2"/>
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "3"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/button_layer4"
+                android:layout_below="@id/button_layer3"
+                android:layout_centerHorizontal="true"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                app:layout_heightPercent="25%"
+                style="?android:attr/buttonBarStyle">
+                <Button
+                    android:id="@+id/button."
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "."/>
+                <Button
+                    android:id="@+id/button0"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "0"/>
+                <Button
+                    android:id="@+id/buttonEqual"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:text = "="/>
+            </LinearLayout>
+        </android.support.percent.PercentRelativeLayout>
+        <LinearLayout
+            android:id="@+id/button_opt"
+            android:layout_toRightOf="@id/button_num"
+            android:layout_width="0dp"
+            app:layout_widthPercent = "25%"
+            android:layout_height="fill_parent"
+            android:layout_below="@id/display"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/buttonDEL"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text = "DEL"/>
+            <Button
+                android:id="@+id/buttonDivide"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text = "\u00F7"/>
+            <Button
+                android:id="@+id/buttonMultiply"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text = "\u00D7"/>
+            <Button
+                android:id="@+id/buttonMinus"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text = "-"/>
+            <Button
+                android:id="@+id/buttonAdd"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1"
+                android:text = "+"/>
+        </LinearLayout>
+    </android.support.percent.PercentRelativeLayout>
+
+
+
+
+
+</RelativeLayout>
